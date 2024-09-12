@@ -58,7 +58,7 @@ object Helpers {
 
     fun formatDateNoTime(date: String?): String {
         return date?.let {
-            SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ", Locale.ROOT).parse(it)?.let { parsedDate ->
+            SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.ROOT).parse(it)?.let { parsedDate ->
                 SimpleDateFormat("yyyy-MM-dd", Locale.ROOT).format(parsedDate)
             }
         } ?: "-"
