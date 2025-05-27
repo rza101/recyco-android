@@ -1,8 +1,10 @@
 package com.ukmprogramming.recyco.data.network.response
 
+import androidx.annotation.Keep
 import com.google.gson.annotations.SerializedName
 import com.ukmprogramming.recyco.data.network.response.models.Article
 
+@Keep
 data class ArticlesResponse(
     @field:SerializedName("data")
     val data: List<Article>? = null,
